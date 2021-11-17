@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+#nav{
+    width: 200px;
+    margin: auto;
+}
+
+#nav nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#nav nav #cartNb{
+    position: absolute;
+    top: 2px;
+    right: -20px;
+    background-color: #1e589b;
+    color: whitesmoke;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    margin: 3em 0;
+}
+
+form{
+    border: 1px solid black;    
+    width: 400px;
+    margin-top: 6em;  
+    text-align: center; 
+}
+
+table{
+    max-width: 400px;
+    margin-top: 6em;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);   
+}
+
+table thead tr{
+    background-color: #1e589b;
+    color: #ffffff;
+}
+
+table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type{
+    background-color: rgb(175, 192, 248);
+    border-bottom: 2px solid #3171ad;
+}
+
+th, td{
+    padding: 12px 15px;
+}
+
+table tbody .qttChanger{
+    padding: 1px 6px;
+    margin: 0 19px;
+    background-color: rgb(175, 192, 248);
+    border-radius: 3px;
+}
+
+.button{
+    margin: 3em 0 0 0;
+    background-color: #1e589b;
+    padding: 0.5em;
+    border-radius: 0.5em; 
+}
+
+.button a{
+    color: whitesmoke;
+}
+
+
+
+
