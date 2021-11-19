@@ -1,7 +1,9 @@
 <?php
     session_start();
-    include "functions.php"
+    include "functions.php";
+    include "db-functions.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,41 +14,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Ajout produit</title>
+    <title>Document</title>
+    
 </head>
 <body>
-    <div id="nav">
-        <?php include "menu.php" ?>
-    </div>
-    <div class="container">
-        <div id="title">
-            <h1>Ajouter un produit</h1>
+    <?php include "menu.php" ?>
+    <div id="mainContainer">
+        
+        <div id="productBox">
+            <?php
+                $products = findAll();
+                foreach ($products as $prod) {
+                    ?>
+                    <div class='prodContainer'>
+
+                        <figure class="imageProd">
+                            <img src="imgProd/<?= $prod['image']?>" alt="Image de <?= $prod['name']?>">
+                        </figure>
+
+                        <h3>
+                            <a href='product.php?id=<?= $prod['id'] ?>'>
+                                <?= $prod['name'] ?>
+                            </a>
+                        </h3>
+
+                        <?php
+                        if(strlen($prod['description']) >= 50){
+                            $synopsis = substr($prod['description'], 0, 47)."...";
+                        }else{
+                            $synopsis = $prod['description'];
+                        }   
+                        ?>                 
+                        <p><?= $synopsis ?></p>
+                        
+                        <p class='price'><?= $prod['price'] ?>&euro;</p>
+                        <a href='traitement.php?action=addProduct&id=<?=$prod['id']?>'>Add to cart</a>
+                    </div>
+                <?php
+                }
+            ?>
         </div>
         
-        <form action="traitement.php?action=addProduct" method="post">
-            <p>
-                <label>
-                    Nom du produit :
-                    <input type="text" name="name">
-                </label>
-            </p>
-            <p>
-                <label>
-                    Prix du produit :
-                    <input type="number" step="any" name="price">
-                </label>
-            </p>
-            <p>
-                <label>
-                    Quantité désirée :
-                    <input type="number" name="qtt" value="1">
-                </label>
-            </p>
-            <p>              
-                <input type="submit" name="submit" value="Ajouter le produit">        
-            </p>
-        </form>
     </div>
-    
 </body>
 </html>

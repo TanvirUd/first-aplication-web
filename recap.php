@@ -15,9 +15,7 @@
     <title>Récapitulatif des produits</title>
 </head>
 <body>
-    <div id="nav">
-        <?php include "menu.php"; ?>
-    </div>
+    <?php include "menu.php"; ?>
     <div class="container">
         <?php
             $idSup = 0; 

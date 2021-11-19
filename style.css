@@ -6,18 +6,18 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-#nav{
+header{
     width: 200px;
     margin: auto;
 }
 
-#nav nav{
+header nav{
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
-#nav nav #cartNb{
+header nav #cartNb{
     position: absolute;
     top: 2px;
     right: -20px;
@@ -29,6 +29,26 @@ body{
     font-size: 0.7em;
     text-align: center;
 }
+
+#messageBloc{
+    width: 1000px;
+    margin: auto;
+}
+
+.success{
+    background-color: rgb(129, 255, 157);
+    color: rgb(22, 78, 25);
+}
+.error{
+    background-color: rgb(255, 134, 134);
+    color: rgb(78, 22, 22);
+}
+.notice{
+    background-color: rgb(134, 211, 255);
+    color: rgb(23, 22, 78);
+}
+
+
 
 a{
     text-decoration: none;
@@ -101,6 +121,60 @@ table tbody .qttChanger{
     color: whitesmoke;
 }
 
+#mainContainer{
+    width: 1000px;
+    margin: auto;
+}
 
+#productBox{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 8em 0;
+}
 
+.prodContainer{
+    padding: 1em;
+    margin: 1em;
+    max-width: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);   
+}
+
+.prodContainer h3{
+    color: #1e589b;
+}
+
+.price{
+    font-weight: bold;
+}
+
+.imageProd{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#imageBig{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    object-fit: cover;
+    text-align: center;
+}
+
+.prodArticle{
+    width: 1000px;
+    margin: auto;
+}
+
+.prodArticle .button{
+    width: max-content;
+    padding: 0.5em 1em;
+    margin: auto;
+}
 
