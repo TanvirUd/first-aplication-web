@@ -150,7 +150,6 @@ table tbody .qttChanger{
 .imageProd{
     width: 100px;
     height: 100px;
-    object-fit: cover;
 }
 
 img{
@@ -163,7 +162,6 @@ img{
     width: 400px;
     height: 400px;
     margin: auto;
-    object-fit: cover;
     text-align: center;
 }
 
